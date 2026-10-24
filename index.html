@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f7fa" />
+    <meta name="description" content="Find a role that feels like your next step." />
+    <title>Nextstep — Find work that moves you forward</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header"><a class="brand" href="#top"><span class="brand-icon">n</span>nextstep<span class="brand-period">.</span></a><nav class="main-nav" aria-label="Main navigation"><a class="selected" href="#jobs">Find a job</a><a href="#how">Career advice</a><a href="#about">About us</a></nav><div class="header-actions"><button class="text-button" id="saved-toggle">♡ Saved <span id="saved-number">0</span></button><button class="sign-in" id="sign-in">Sign in</button></div></header>
+
+    <main id="top">
+      <section class="hero"><div class="hero-content"><p class="eyebrow"><span></span> YOUR NEXT CHAPTER STARTS HERE</p><h1>Find work that<br />moves you <em>forward.</em></h1><p class="hero-description">Good work should fit your life, your skills, and where you want to go next. Let's find it.</p><form id="search-form" class="search-form"><label class="search-field"><span class="magnify">⌕</span><input id="search-input" type="search" placeholder="Role, skill, or company" aria-label="Search by role, skill or company" /></label><span class="search-divider"></span><label class="location-field"><span>⌖</span><input id="location-input" type="search" placeholder="City or remote" aria-label="Filter by city or remote" /></label><button type="submit">Find my next job <b>→</b></button></form><div class="hero-proof"><span class="proof-spark">✳</span> <strong>2,400+</strong> new opportunities this week <span class="proof-divider"></span> Curated for humans, by humans</div></div><div class="hero-art"><div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div><div class="art-card card-back"><span class="mini-badge">YOUR NEXT STEP</span><div class="card-back-stars">✦ ✦ ✦</div></div><div class="art-card card-front"><div class="profile-mini"><span class="profile-avatar">A</span><span><b>A role that fits</b><small>Your next chapter is closer than you think.</small></span></div><div class="mini-line long"></div><div class="mini-line"></div><div class="mini-pills"><i></i><i></i><i></i></div><div class="match-label"><span>↗</span> Great match</div></div><div class="art-spark spark-a">✦</div><div class="art-spark spark-b">✳</div></div></section>
+
+      <section class="jobs-section" id="jobs"><div class="section-head"><div><p class="eyebrow small-eyebrow">A FRESH PLACE TO START</p><h2>Opportunities with <em>possibility.</em></h2><p class="section-description">Thoughtful teams. Meaningful work. A next step that feels right.</p></div><div class="sort-wrap"><label for="sort-select">Sort by</label><select id="sort-select"><option value="recommended">Recommended</option><option value="recent">Most recent</option><option value="salary">Highest salary</option></select></div></div><div class="filter-bar"><div class="category-filters" role="group" aria-label="Filter jobs by department"><button class="filter-chip active" data-category="All">All roles</button><button class="filter-chip" data-category="Engineering">Engineering</button><button class="filter-chip" data-category="Design">Design</button><button class="filter-chip" data-category="Product">Product</button><button class="filter-chip" data-category="Data">Data</button><button class="filter-chip" data-category="Marketing">Marketing</button></div><label class="remote-filter"><span>⌁</span><select id="remote-select" aria-label="Workplace type"><option value="all">Any workplace</option><option value="Remote">Remote</option><option value="Hybrid">Hybrid</option><option value="On-site">On-site</option></select></label><label class="type-filter"><select id="type-select" aria-label="Job type"><option value="all">Any job type</option><option value="Full-time">Full-time</option><option value="Contract">Contract</option></select></label></div>
+
+        <div class="results-summary"><span id="results-count">8 roles</span><span id="filter-summary">Across teams ready for a fresh perspective</span><button id="clear-filters">Clear filters</button></div>
+        <div class="job-layout"><div class="job-list" id="job-list" aria-label="Job listings"></div><aside class="job-details" id="job-details" aria-live="polite"></aside></div>
+        <div class="no-results" id="no-results" hidden><span>🧭</span><h3>Let's try a different direction.</h3><p>No roles matched those filters. Clear them and see what else is out there.</p><button id="reset-search">Show every role</button></div>
+      </section>
+
+      <section class="career-note" id="how"><div class="note-icon">✦</div><div><p class="eyebrow small-eyebrow">A NOTE FROM US</p><h2>Your path doesn't have to be <em>perfectly straight.</em></h2><p>Career breaks, bold pivots, and second starts belong in the story. Find teams that see the whole person behind the resume.</p></div><a href="#jobs">Explore opportunities <span>→</span></a></section>
+      <footer id="about"><a class="brand" href="#top"><span class="brand-icon">n</span>nextstep<span class="brand-period">.</span></a><span>Good work, for real life. © 2025 Nextstep</span><a href="#top">Back to top ↑</a></footer>
+    </main>
+
+    <dialog class="apply-dialog" id="apply-dialog"><button class="dialog-close" id="close-dialog" aria-label="Close">×</button><div class="dialog-company-icon" id="dialog-icon"></div><p class="eyebrow small-eyebrow">TAKE YOUR NEXT STEP</p><h2 id="dialog-title">Apply for a role</h2><p class="dialog-subtitle" id="dialog-subtitle"></p><form id="apply-form"><label>Your name<input name="name" required maxlength="60" placeholder="Your full name" /></label><label>Email address<input name="email" type="email" required placeholder="you@example.com" /></label><label>What interests you about this role?<textarea name="note" rows="3" maxlength="350" placeholder="A few words about why this feels like a good fit…"></textarea></label><button type="submit" class="apply-submit">Send my interest <span>→</span></button><small>This is a portfolio demo. Your information is not sent anywhere.</small></form></dialog>
+    <div class="toast" id="toast" role="status"></div>
+  </body>
+</html>
